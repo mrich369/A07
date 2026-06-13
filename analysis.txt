@@ -1,0 +1,9 @@
+1. Dataset Description. What data did you collect? From where? How many records? What are the columns/fields?
+
+2. Pipeline Description. Walk through each step of your pipeline: what does each function do? How do the pieces connect?
+
+3. Findings. What did your analysis reveal? Reference your groupby results and chart. What was surprising or interesting?
+
+4. Ethical Considerations. How did you ensure your data collection was ethical? Did you check robots.txt? Did you use rate limiting? Are there any concerns about the data you collected?
+
+5. Limitations. What are the limits of your analysis? What would you do differently with more time?
