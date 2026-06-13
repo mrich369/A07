@@ -1,9 +1,42 @@
-1. Dataset Description. What data did you collect? From where? How many records? What are the columns/fields?
+1. Dataset Description.
 
-2. Pipeline Description. Walk through each step of your pipeline: what does each function do? How do the pieces connect?
+The data for this project came from http://quotes.toscrape.com. This data included quotes
+from a variety of authors with differing tags as labels. I took the data from the first 
+three pages of the website. It included 30 records, all including a quote, author, and
+multiple tags. These became the columns of my dataset.
 
-3. Findings. What did your analysis reveal? Reference your groupby results and chart. What was surprising or interesting?
+2. Pipeline Description.
 
-4. Ethical Considerations. How did you ensure your data collection was ethical? Did you check robots.txt? Did you use rate limiting? Are there any concerns about the data you collected?
+My pipeline first calls on the scrape_all_pages function. It contains three other functions. 
+So this function is actually four functions. It begins with fetch_page which gains access
+to the url. Next is the parse_page function which gathers the relevant data from the url.
+This includes the test of the quote, the author, and the tags. Then, the store_quote function
+stores the gathered information into a database. This is all included in the scrape_all_pages
+function, which gathers from the first three pages of the website.
 
-5. Limitations. What are the limits of your analysis? What would you do differently with more time?
+Next, I set the query_analyze function equal to quotes_per_author. I gathered
+statistics on my data such as quotes per author, most prolific authors, and tag frequency.
+Then, the data_visualization function calls on the quotes_per_author information to create
+a bar chart displaying the number of quotes per author. The main function runs all of the
+above pieces so that the user only needs to run one function.
+
+3. Findings. 
+
+My analysis gave me some statistics about the frequency of authors and tags. My chart
+specifically showed that Albert Einstein had the most quotes on this website. I found 
+this surprising as he is not an author in the sense that I imagined. Many of the other 
+authors had only one or two quotes in comparison to Einstein's six. I also found it 
+interesting that life and love were the most frequent quote tags.
+
+4. Ethical Considerations. 
+
+This data collection is considered ethical primarily due to the specific website that 
+the data was pulled from. The website is called quotes.toscrape.com. It is intended for
+this exact use. I used time.sleep(5) to give the server a break between scrapes.
+
+5. Limitations. 
+
+My analysis was limited in certain aspects because there was a limited amount of data.
+It also contains mostly qualitative data which is limiting in some aspects compared to
+quantitive data. With more time, I would have liked to consult with AI to brainstorm 
+other analysis ideas.
